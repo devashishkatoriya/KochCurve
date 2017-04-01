@@ -36,9 +36,13 @@ void koch(int x1,int y1,int x2,int y2,int it)
 
     if(it>0)
     {
+        delay(1000);
         koch(x1,y1,x3,y3,it-1);
+        delay(1000);
         koch(x3,y3,x,y,it-1);
+        delay(1000);
         koch(x,y,x4,y4,it-1);
+        delay(1000);
         koch(x4,y4,x2,y2,it-1);
     }
     else
@@ -64,7 +68,7 @@ int main()
     koch(200,266,100,100,1);
     koch(100,100,300,100,1);
     koch(300,100,200,266,1);
-    seedFill(150,150,BLUE);
+    seedFill(150,150,WHITE);
 
     delay(15000);
     closegraph();
